@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER domain — replace before deployment (see docs/README.md)
+Sitemap: https://dominio-pendiente.invalid/sitemap.xml
