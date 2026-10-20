@@ -1,73 +1,66 @@
 /* ==========================================================================
    MB — Estudio Jurídico Moreno · Baudino
-   Concept: "the annotated document" — paper, ink, lacre accent, margin column.
+   Concept: "the annotated document" — paper, navy ink, brown accent, margin column.
    Tokens → base → layout → components → pages → utilities.
    ========================================================================== */
 
 /* ---------- Fonts (self-hosted, OFL) ---------- */
 @font-face {
-  font-family: "Newsreader";
-  src: url("../assets/fonts/newsreader-wght-normal.woff2") format("woff2");
-  font-weight: 200 800;
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/playfair-display-latin-wght-normal.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Newsreader";
-  src: url("../assets/fonts/newsreader-wght-italic.woff2") format("woff2");
-  font-weight: 200 800;
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/playfair-display-latin-wght-italic.woff2") format("woff2");
+  font-weight: 400 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: "Public Sans";
-  src: url("../assets/fonts/public-sans-400.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Public Sans";
-  src: url("../assets/fonts/public-sans-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Public Sans";
-  src: url("../assets/fonts/public-sans-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
   font-display: swap;
 }
 
 /* ---------- Tokens ---------- */
 :root {
   /* Color */
-  --paper: #f5f2ea;
-  --paper-2: #ece7db;
-  --ink: #1c2320;
-  --ink-2: #4a524e;
-  --rule: #d6cfbf;
-  --rule-strong: #8a8374; /* form borders: ≥3:1 on paper */
-  --lacre: #8b3a2b;
-  --lacre-dark: #6e2c20;
-  --lacre-light: #e3a08c;
-  --terracota: #cf7a55;      /* hero CTA bg; --ink text on it = 5.0:1 */
-  --on-ink: #f5f2ea;
-  --on-ink-2: #b9bfb9;
-  --verde: #1c2320;          /* original dark green: page headers, contact band, rules */
-  --on-verde-2: #b9bfb9;     /* secondary text on --verde (8.6:1) */
-  --lacre-on-verde: #e3a08c; /* accents/links on --verde (7.4:1) */
+  --paper: #f4efeb;
+  --paper-2: #e8e0d6;
+  --ink: #122836;
+  --ink-2: #3e4f60;
+  --rule: #d8cdc0;
+  --rule-strong: #8c7561; /* form borders: ≥3:1 on paper */
+  --lacre: #6f5a47;
+  --lacre-dark: #54432f;
+  --lacre-light: #c1a58a;
+  --terracota: #c1a58a;      /* hero CTA bg (tan); --ink text on it */
+  --on-ink: #f4efeb;
+  --on-ink-2: #c7d9e5;
+  --verde: #122836;          /* navy: page headers, contact band, rules */
+  --on-verde-2: #c7d9e5;     /* secondary text on navy */
+  --lacre-on-verde: #c1a58a; /* accents/links on navy */
 
   /* Type */
-  --font-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-  --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --fs-h1: clamp(2.5rem, 1.6rem + 3.6vw, 4rem);
-  --fs-h2: clamp(1.875rem, 1.4rem + 1.9vw, 2.625rem);
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-h1: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 1.35rem + 1.6vw, 2.375rem);
   --fs-h3: clamp(1.3rem, 1.2rem + 0.4vw, 1.5rem);
   --fs-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
-  --fs-body: 1.0625rem;
+  --fs-body: 1rem;
   --fs-small: 0.9375rem;
   --fs-xs: 0.8125rem;
 
@@ -716,7 +709,7 @@ svg { display: block; }
 }
 .form select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231c2320' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23122836' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1.1rem;
@@ -866,7 +859,7 @@ svg { display: block; }
   margin: 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: #2a322e; /* shown while the image loads */
+  background: #1d3a4d; /* shown while the image loads */
 }
 .hero__media picture { display: contents; }
 .hero__media img {
@@ -874,12 +867,12 @@ svg { display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 34% 50%;
 }
 .hero__facts {
   margin: var(--s-4) 0 0;
   padding-top: var(--s-2);
-  border-top: 1px solid rgba(245, 242, 234, 0.2);
+  border-top: 1px solid rgba(244, 239, 235, 0.2);
   font-size: var(--fs-xs);
   letter-spacing: 0.02em;
   color: var(--on-verde-2);
@@ -888,5 +881,5 @@ svg { display: block; }
 @media (max-width: 56rem) {
   /* Vertical subject: near-square crop keeps scales and head in frame */
   .hero__media { aspect-ratio: 1 / 1; }
-  .hero__media img { object-position: 50% 30%; }
+  .hero__media img { object-position: 34% 50%; }
 }
