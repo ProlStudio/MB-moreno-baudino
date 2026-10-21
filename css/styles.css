@@ -436,7 +436,7 @@ svg { display: block; }
 
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: var(--s-6);
   align-items: end;
 }
@@ -857,9 +857,11 @@ svg { display: block; }
 .hero__grid { align-items: center; }
 .hero__media {
   margin: 0;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1400 / 882; /* full photo, no crop */
   overflow: hidden;
   background: #1d3a4d; /* shown while the image loads */
+  outline: 1px solid var(--lacre-on-verde); /* thin tan frame */
+  outline-offset: 10px;
 }
 .hero__media picture { display: contents; }
 .hero__media img {
@@ -877,9 +879,4 @@ svg { display: block; }
   letter-spacing: 0.02em;
   color: var(--on-verde-2);
   max-width: 36rem;
-}
-@media (max-width: 56rem) {
-  /* Vertical subject: near-square crop keeps scales and head in frame */
-  .hero__media { aspect-ratio: 1 / 1; }
-  .hero__media img { object-position: 34% 50%; }
 }
