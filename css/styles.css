@@ -72,7 +72,7 @@
   --s-5: 3rem;
   --s-6: 4rem;
   --s-7: 6rem;
-  --section-y: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  --section-y: clamp(2.5rem, 1.5rem + 4vw, 1rem);
 
   /* Layout */
   --container: 72rem;
