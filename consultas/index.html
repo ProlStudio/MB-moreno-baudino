@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
 
-  <link rel="preload" href="../aassets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/styles.css">
   <script>document.documentElement.classList.replace("no-js", "js");</script>
@@ -141,8 +141,8 @@
         <a class="btn btn--primary btn--small" href="https://wa.me/5493515501343?text=Hola%2C%20quisiera%20coordinar%20una%20consulta." target="_blank" rel="noopener">Consultar</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="visually-hidden">Abrir menú</span>
-          <svg class="icon icon--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-          <svg class="icon icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+          <span class="icon icon--menu ico ico-menu" aria-hidden="true"></span>
+          <span class="icon icon--close ico ico-close" aria-hidden="true"></span>
         </button>
       </div>
     </div>
@@ -168,10 +168,10 @@
         <div>
           <h2 id="canales-title">Canales de contacto</h2>
           <ul class="channel-list">
-            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.2 3.8a10 10 0 0 0-16.9 10.9L2 22l7.5-1.2a10 10 0 0 0 4.6 1.1h0a10 10 0 0 0 10-10 9.9 9.9 0 0 0-3.9-8.1z"/><path d="M8.4 8.1c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.4 1 1.5 2.1 2.4 1.4 1.2 2 1.3 2.3 1.2.3-.1.5-.4.7-.7.2-.2.4-.3.6-.2.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.2.1 1-.3 1.5-.4.6-1.9 1.1-2.6 1.1-.7 0-2.4-.3-4.6-2.2-2.6-2.3-3.3-4.5-3.4-4.8-.1-.3-.9-1.3-.9-2.5 0-1.2.6-1.8.8-2.2z"/></svg><div><strong><a href="https://wa.me/5493515501343?text=Hola%2C%20quisiera%20coordinar%20una%20consulta." target="_blank" rel="noopener">WhatsApp</a></strong><p>+54 9 351 550-1343</p></div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1.1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.9c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1.1L6.6 10.8z"/></svg><div><strong>Teléfonos</strong><p><a href="tel:+5493515501343">+54 9 351 550-1343</a><br><a href="tel:+5493512580512">+54 9 351 258-0512</a></p></div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s7-6.6 7-12a7 7 0 0 0-14 0c0 5.4 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Presencial</strong><p>En Córdoba Capital, con turno coordinado previamente.</p></div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><strong>Videollamada</strong><p>Se coordina al pedir la consulta.</p></div></li>
+            <li><span class="icon ico ico-whatsapp" aria-hidden="true"></span><div><strong><a href="https://wa.me/5493515501343?text=Hola%2C%20quisiera%20coordinar%20una%20consulta." target="_blank" rel="noopener">WhatsApp</a></strong><p>+54 9 351 550-1343</p></div></li>
+            <li><span class="icon ico ico-phone" aria-hidden="true"></span><div><strong>Teléfonos</strong><p><a href="tel:+5493515501343">+54 9 351 550-1343</a><br><a href="tel:+5493512580512">+54 9 351 258-0512</a></p></div></li>
+            <li><span class="icon ico ico-location" aria-hidden="true"></span><div><strong>Presencial</strong><p>En Córdoba Capital, con turno coordinado previamente.</p></div></li>
+            <li><span class="icon ico ico-calendar" aria-hidden="true"></span><div><strong>Videollamada</strong><p>Se coordina al pedir la consulta.</p></div></li>
           </ul>
         </div>
 
@@ -192,15 +192,20 @@
             <label for="motivo">Motivo de consulta</label>
             <select id="motivo" name="motivo" required aria-describedby="motivo-error">
               <option value="">Elegí un área</option>
-              <option>Derecho Inmobiliario</option>
-              <option>Derecho Civil y Comercial</option>
-              <option>Derecho Laboral</option>
+              <option>Civil y Comercial</option>
+              <option>Inmobiliario</option>
+              <option>Societario</option>
+              <option>Laboral y ART</option>
+              <option>Familia y Sucesiones</option>
+              <option>Defensa del Consumidor</option>
+              <option>Propiedad Intelectual y Marcas</option>
+              <option>Otro / No estoy seguro</option>
             </select>
             <p class="form__error" id="motivo-error" aria-live="polite"></p>
           </div>
-          <button class="btn btn--primary" type="submit"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.2 3.8a10 10 0 0 0-16.9 10.9L2 22l7.5-1.2a10 10 0 0 0 4.6 1.1h0a10 10 0 0 0 10-10 9.9 9.9 0 0 0-3.9-8.1z"/><path d="M8.4 8.1c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.4 1 1.5 2.1 2.4 1.4 1.2 2 1.3 2.3 1.2.3-.1.5-.4.7-.7.2-.2.4-.3.6-.2.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.2.1 1-.3 1.5-.4.6-1.9 1.1-2.6 1.1-.7 0-2.4-.3-4.6-2.2-2.6-2.3-3.3-4.5-3.4-4.8-.1-.3-.9-1.3-.9-2.5 0-1.2.6-1.8.8-2.2z"/></svg>Enviar por WhatsApp</button>
+          <button class="btn btn--primary" type="submit"><span class="icon ico ico-whatsapp" aria-hidden="true"></span>Enviar por WhatsApp</button>
           <p class="form__status" id="form-status" role="status"></p>
-          <p class="form__note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Este primer contacto sirve solo para coordinar la consulta y no reemplaza una consulta confidencial. Por favor, no compartas detalles de tu caso a través del sitio. Más información en el <a href="../privacidad/">aviso de privacidad</a>.</span></p>
+          <p class="form__note"><span class="icon ico ico-lock" aria-hidden="true"></span><span>Este primer contacto sirve solo para coordinar la consulta y no reemplaza una consulta confidencial. Por favor, no compartas detalles de tu caso a través del sitio. Más información en el <a href="../privacidad/">aviso de privacidad</a>.</span></p>
         </form>
       </div>
     </section>
@@ -214,31 +219,31 @@
           <h2 id="preguntas-title">Preguntas frecuentes</h2>
         <div class="faq">
           <details class="faq__item">
-            <summary>¿Cómo es la primera reunión?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Cómo es la primera reunión?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Nos contás tu situación, revisamos la documentación que tengas y te explicamos las alternativas posibles. Si decidís avanzar, te presentamos una propuesta de trabajo y cómo se determinan los honorarios.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿La consulta es confidencial?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿La consulta es confidencial?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Sí. Lo que nos cuentes en la consulta está alcanzado por el secreto profesional. Por eso te pedimos no enviar detalles del caso a través de este sitio: el primer contacto sirve solo para coordinar la consulta.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿Atienden de forma presencial y virtual?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Atienden de forma presencial y virtual?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Sí. Atendemos de forma presencial en Córdoba Capital y también por videollamada. La modalidad se coordina al pedir la consulta.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿Cómo puedo saber si mi caso tiene viabilidad?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Cómo puedo saber si mi caso tiene viabilidad?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>La viabilidad depende de los hechos, de la documentación disponible y de la normativa aplicable. En la consulta inicial analizamos tu situación y te explicamos qué alternativas existen y qué implica cada una. Ningún abogado puede garantizar un resultado; sí podemos explicarte con claridad el panorama para que decidas con información.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿Cuánto puede durar un proceso judicial?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Cuánto puede durar un proceso judicial?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Depende del tipo de proceso, de su complejidad y de los tiempos de cada tribunal, por lo que no es posible anticipar un plazo exacto. En la evaluación del caso te explicamos las etapas previsibles y, si avanzamos, te mantenemos al tanto de cada novedad.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿Cómo se determina el costo de un juicio?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Cómo se determina el costo de un juicio?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Los honorarios dependen del tipo de asunto, de su complejidad y de las etapas que requiera, dentro del marco de la normativa arancelaria de la Provincia de Córdoba. Te los explicamos antes de avanzar, para que puedas decidir con información.</p></div>
           </details>
           <details class="faq__item">
-            <summary>¿Qué documentación debo presentar para iniciar una consulta?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></summary>
+            <summary>¿Qué documentación debo presentar para iniciar una consulta?<span class="icon ico ico-chevron-down" aria-hidden="true"></span></summary>
             <div class="faq__answer"><p>Depende del asunto. Como referencia, conviene reunir la documentación relacionada con el caso: por ejemplo, escrituras, boletos de compraventa, contratos, recibos de sueldo o comunicaciones recibidas. Al coordinar la consulta te indicamos qué resulta útil en tu caso.</p></div>
           </details>
         </div>

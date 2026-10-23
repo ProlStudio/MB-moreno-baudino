@@ -72,7 +72,7 @@
   --s-5: 3rem;
   --s-6: 4rem;
   --s-7: 6rem;
-  --section-y: clamp(3.5rem, 2rem + 6vw, 8rem);
+  --section-y: clamp(2.5rem, 1.5rem + 4vw, 5rem);
 
   /* Layout */
   --container: 72rem;
@@ -110,7 +110,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: var(--fs-body);
-  line-height: 1.65;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -122,7 +122,7 @@ h3 {
   font-weight: 450;
   line-height: 1.12;
   letter-spacing: -0.01em;
-  margin: 0 0 var(--s-2);
+  margin: 0 0 0.75rem;
   text-wrap: balance;
 }
 h1 { font-size: var(--fs-h1); font-weight: 400; }
@@ -130,7 +130,7 @@ h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); line-height: 1.25; }
 
 p {
-  margin: 0 0 var(--s-2);
+  margin: 0 0 0.875rem;
   max-width: var(--measure);
   text-wrap: pretty;
 }
@@ -402,7 +402,7 @@ svg { display: block; }
 .doc {
   display: grid;
   grid-template-columns: var(--margin-col) minmax(0, 1fr);
-  column-gap: var(--s-5);
+  column-gap: var(--s-4);
 }
 
 .doc__margin {
@@ -477,7 +477,7 @@ svg { display: block; }
   display: grid;
   grid-template-columns: 3.5rem minmax(0, 1fr);
   gap: var(--s-2);
-  padding-block: var(--s-3);
+  padding-block: 1.1rem;
   border-top: 1px solid var(--rule);
 }
 .clause:last-child { border-bottom: 1px solid var(--rule); }
@@ -495,15 +495,15 @@ svg { display: block; }
 .areas {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--s-3);
-  margin-top: var(--s-4);
+  gap: var(--s-2);
+  margin-top: var(--s-3);
 }
 /* Odd count: the last card spans the full row instead of sitting alone */
 .area:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .area {
   display: flex;
   flex-direction: column;
-  padding: var(--s-3);
+  padding: 1.25rem;
   border: 1px solid var(--rule-strong);
   border-top: 3px solid var(--verde);
   border-radius: var(--radius);
@@ -537,8 +537,8 @@ svg { display: block; }
 .lawyers {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--s-3);
-  margin-top: var(--s-4);
+  gap: var(--s-2);
+  margin-top: var(--s-3);
   list-style: none;
 }
 .lawyer {
@@ -666,10 +666,10 @@ svg { display: block; }
 }
 
 /* ---------- Content pages ---------- */
-.prose h2 { margin-top: var(--s-5); }
+.prose h2 { margin-top: var(--s-4); }
 .prose h2:first-child { margin-top: 0; }
-.prose ul { padding-left: 1.2rem; margin-bottom: var(--s-2); max-width: var(--measure); }
-.prose li { margin-bottom: 0.4rem; }
+.prose ul { padding-left: 1.2rem; margin-bottom: 0.875rem; max-width: var(--measure); }
+.prose li { margin-bottom: 0.25rem; }
 
 .topic-grid {
   display: grid;
@@ -920,3 +920,102 @@ svg { display: block; }
   color: var(--on-verde-2);
   max-width: 36rem;
 }
+
+/* ---------- Icons from /assets/icons (CSS mask: takes the text color) ----------
+   Use: <span class="icon ico ico-whatsapp" aria-hidden="true"></span>
+   To change an icon, replace its .svg file. Name = file name without ".svg". */
+.ico {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+}
+.ico-briefcase { --ico: url("../assets/icons/business/briefcase.svg"); }
+.ico-building { --ico: url("../assets/icons/business/building.svg"); }
+.ico-office { --ico: url("../assets/icons/business/office.svg"); }
+.ico-settings { --ico: url("../assets/icons/business/settings.svg"); }
+.ico-support { --ico: url("../assets/icons/business/support.svg"); }
+.ico-team { --ico: url("../assets/icons/business/team.svg"); }
+.ico-user { --ico: url("../assets/icons/business/user.svg"); }
+.ico-users { --ico: url("../assets/icons/business/users.svg"); }
+.ico-calendar { --ico: url("../assets/icons/communication/calendar.svg"); }
+.ico-clock { --ico: url("../assets/icons/communication/clock.svg"); }
+.ico-contact { --ico: url("../assets/icons/communication/contact.svg"); }
+.ico-email { --ico: url("../assets/icons/communication/email.svg"); }
+.ico-location { --ico: url("../assets/icons/communication/location.svg"); }
+.ico-map { --ico: url("../assets/icons/communication/map.svg"); }
+.ico-mobile { --ico: url("../assets/icons/communication/mobile.svg"); }
+.ico-phone { --ico: url("../assets/icons/communication/phone.svg"); }
+.ico-whatsapp-business { --ico: url("../assets/icons/communication/whatsapp-business.svg"); }
+.ico-whatsapp { --ico: url("../assets/icons/communication/whatsapp.svg"); }
+.ico-attachment { --ico: url("../assets/icons/documents/attachment.svg"); }
+.ico-document { --ico: url("../assets/icons/documents/document.svg"); }
+.ico-file { --ico: url("../assets/icons/documents/file.svg"); }
+.ico-pdf { --ico: url("../assets/icons/documents/pdf.svg"); }
+.ico-print { --ico: url("../assets/icons/documents/print.svg"); }
+.ico-bag { --ico: url("../assets/icons/ecommerce/bag.svg"); }
+.ico-cart { --ico: url("../assets/icons/ecommerce/cart.svg"); }
+.ico-coupon { --ico: url("../assets/icons/ecommerce/coupon.svg"); }
+.ico-discount { --ico: url("../assets/icons/ecommerce/discount.svg"); }
+.ico-favorite { --ico: url("../assets/icons/ecommerce/favorite.svg"); }
+.ico-heart { --ico: url("../assets/icons/ecommerce/heart.svg"); }
+.ico-package { --ico: url("../assets/icons/ecommerce/package.svg"); }
+.ico-return { --ico: url("../assets/icons/ecommerce/return.svg"); }
+.ico-shipping { --ico: url("../assets/icons/ecommerce/shipping.svg"); }
+.ico-star { --ico: url("../assets/icons/ecommerce/star.svg"); }
+.ico-tag { --ico: url("../assets/icons/ecommerce/tag.svg"); }
+.ico-arrow-down { --ico: url("../assets/icons/navigation/arrow-down.svg"); }
+.ico-arrow-left { --ico: url("../assets/icons/navigation/arrow-left.svg"); }
+.ico-arrow-right { --ico: url("../assets/icons/navigation/arrow-right.svg"); }
+.ico-arrow-up { --ico: url("../assets/icons/navigation/arrow-up.svg"); }
+.ico-back { --ico: url("../assets/icons/navigation/back.svg"); }
+.ico-chevron-down { --ico: url("../assets/icons/navigation/chevron-down.svg"); }
+.ico-chevron-left { --ico: url("../assets/icons/navigation/chevron-left.svg"); }
+.ico-chevron-right { --ico: url("../assets/icons/navigation/chevron-right.svg"); }
+.ico-chevron-up { --ico: url("../assets/icons/navigation/chevron-up.svg"); }
+.ico-close { --ico: url("../assets/icons/navigation/close.svg"); }
+.ico-forward { --ico: url("../assets/icons/navigation/forward.svg"); }
+.ico-home { --ico: url("../assets/icons/navigation/home.svg"); }
+.ico-menu { --ico: url("../assets/icons/navigation/menu.svg"); }
+.ico-search { --ico: url("../assets/icons/navigation/search.svg"); }
+.ico-amex { --ico: url("../assets/icons/payments/amex.svg"); }
+.ico-bank-transfer { --ico: url("../assets/icons/payments/bank-transfer.svg"); }
+.ico-cash { --ico: url("../assets/icons/payments/cash.svg"); }
+.ico-credit-card { --ico: url("../assets/icons/payments/credit-card.svg"); }
+.ico-mastercard { --ico: url("../assets/icons/payments/mastercard.svg"); }
+.ico-mercado-pago { --ico: url("../assets/icons/payments/mercado-pago.svg"); }
+.ico-paypal { --ico: url("../assets/icons/payments/paypal.svg"); }
+.ico-stripe { --ico: url("../assets/icons/payments/stripe.svg"); }
+.ico-visa { --ico: url("../assets/icons/payments/visa.svg"); }
+.ico-wallet { --ico: url("../assets/icons/payments/wallet.svg"); }
+.ico-lock { --ico: url("../assets/icons/security/lock.svg"); }
+.ico-privacy { --ico: url("../assets/icons/security/privacy.svg"); }
+.ico-secure-payment { --ico: url("../assets/icons/security/secure-payment.svg"); }
+.ico-shield { --ico: url("../assets/icons/security/shield.svg"); }
+.ico-unlock { --ico: url("../assets/icons/security/unlock.svg"); }
+.ico-verified { --ico: url("../assets/icons/security/verified.svg"); }
+.ico-facebook { --ico: url("../assets/icons/social/facebook.svg"); }
+.ico-instagram { --ico: url("../assets/icons/social/instagram.svg"); }
+.ico-linkedin { --ico: url("../assets/icons/social/linkedin.svg"); }
+.ico-pinterest { --ico: url("../assets/icons/social/pinterest.svg"); }
+.ico-threads { --ico: url("../assets/icons/social/threads.svg"); }
+.ico-tiktok { --ico: url("../assets/icons/social/tiktok.svg"); }
+.ico-x { --ico: url("../assets/icons/social/x.svg"); }
+.ico-youtube { --ico: url("../assets/icons/social/youtube.svg"); }
+.ico-check-circle { --ico: url("../assets/icons/ui/check-circle.svg"); }
+.ico-check { --ico: url("../assets/icons/ui/check.svg"); }
+.ico-copy { --ico: url("../assets/icons/ui/copy.svg"); }
+.ico-download { --ico: url("../assets/icons/ui/download.svg"); }
+.ico-error { --ico: url("../assets/icons/ui/error.svg"); }
+.ico-external-link { --ico: url("../assets/icons/ui/external-link.svg"); }
+.ico-info { --ico: url("../assets/icons/ui/info.svg"); }
+.ico-minus { --ico: url("../assets/icons/ui/minus.svg"); }
+.ico-plus { --ico: url("../assets/icons/ui/plus.svg"); }
+.ico-share { --ico: url("../assets/icons/ui/share.svg"); }
+.ico-success { --ico: url("../assets/icons/ui/success.svg"); }
+.ico-upload { --ico: url("../assets/icons/ui/upload.svg"); }
+.ico-warning { --ico: url("../assets/icons/ui/warning.svg"); }
+
+/* WhatsApp glyph reads small next to the other icons: scale it, keep the file untouched.
+   Raise/lower the number to taste (1 = original size). */
+.ico-whatsapp { scale: 2; }
