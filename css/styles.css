@@ -494,10 +494,12 @@ svg { display: block; }
 /* ---------- Practice areas ---------- */
 .areas {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--s-3);
   margin-top: var(--s-4);
 }
+/* Odd count: the last card spans the full row instead of sitting alone */
+.area:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .area {
   display: flex;
   flex-direction: column;
@@ -519,7 +521,7 @@ svg { display: block; }
 .area p { color: var(--ink-2); }
 .area .link-arrow { margin-top: auto; padding-top: var(--s-2); }
 
-@media (max-width: 56rem) {
+@media (max-width: 40rem) {
   .areas { grid-template-columns: 1fr; }
   .area { padding: var(--s-3); }
 }
