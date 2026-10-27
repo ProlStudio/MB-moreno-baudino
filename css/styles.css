@@ -72,7 +72,7 @@
   --s-5: 3rem;
   --s-6: 4rem;
   --s-7: 6rem;
-  --section-y: clamp(2.5rem, 1.5rem + 4vw, 1rem);
+  --section-y: clamp(2.5rem, 1.5rem + 4vw, 5rem);
 
   /* Layout */
   --container: 72rem;
@@ -223,8 +223,8 @@ svg { display: block; }
   gap: 0.6em;
   min-height: 3rem;
   padding: 0.75rem 1.4rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
+  border: 0;
+  border-radius: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
@@ -882,11 +882,10 @@ svg { display: block; }
 /* Primary CTA on dark: light button keeps a clear edge against the background */
 .page-hero .btn--primary { background: var(--on-ink); color: var(--ink); }
 .page-hero .btn--primary:hover { background: var(--lacre-on-verde); color: var(--ink); }
-/* Hero WhatsApp CTA: terracota background, green text, white border (D35) */
+/* Hero WhatsApp CTA: tan background, navy text, no border (client request) */
 .hero .btn--primary {
   background: var(--terracota);
   color: var(--ink);
-  border: 1.5px solid #fff;
 }
 .hero .btn--primary:hover { background: var(--lacre-on-verde); color: var(--ink); }
 /* Following section needs no extra top rule after a dark header */
@@ -900,8 +899,6 @@ svg { display: block; }
   aspect-ratio: 1400 / 882; /* full photo, no crop */
   overflow: hidden;
   background: #1d3a4d; /* shown while the image loads */
-  outline: 1px solid var(--lacre-on-verde); /* thin tan frame */
-  outline-offset: 10px;
 }
 .hero__media picture { display: contents; }
 .hero__media img {
@@ -1015,7 +1012,3 @@ svg { display: block; }
 .ico-success { --ico: url("../assets/icons/ui/success.svg"); }
 .ico-upload { --ico: url("../assets/icons/ui/upload.svg"); }
 .ico-warning { --ico: url("../assets/icons/ui/warning.svg"); }
-
-/* WhatsApp glyph reads small next to the other icons: scale it, keep the file untouched.
-   Raise/lower the number to taste (1 = original size). */
-.ico-whatsapp { scale: 2; }
