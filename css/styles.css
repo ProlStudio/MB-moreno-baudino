@@ -1012,3 +1012,39 @@ svg { display: block; }
 .ico-success { --ico: url("../assets/icons/ui/success.svg"); }
 .ico-upload { --ico: url("../assets/icons/ui/upload.svg"); }
 .ico-warning { --ico: url("../assets/icons/ui/warning.svg"); }
+
+/* ---------- Hero: full-width photo with navy fade (client mockup) ----------
+   HTML is unchanged: .hero__media sits behind the text and fades into --verde. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: clamp(30rem, 22rem + 16vw, 40rem);
+}
+.hero__grid { width: 100%; grid-template-columns: minmax(0, 1fr); }
+.hero__grid > div { position: relative; z-index: 1; max-width: 36rem; }
+.hero__media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(72%, 1180px);
+  aspect-ratio: auto;
+  margin: 0;
+  background: var(--verde);
+  z-index: 0;
+}
+.hero__media img { object-position: 60% 50%; }
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--verde) 0%, rgba(18, 40, 54, 0.85) 18%, rgba(18, 40, 54, 0) 58%);
+}
+@media (max-width: 56rem) {
+  .hero__media { width: 100%; }
+  .hero__media::after {
+    background: linear-gradient(180deg, rgba(18, 40, 54, 0.94) 0%, rgba(18, 40, 54, 0.82) 60%, rgba(18, 40, 54, 0.7) 100%);
+  }
+}
